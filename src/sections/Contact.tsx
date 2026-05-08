@@ -149,11 +149,7 @@ export function Contact() {
                   </>
                 )}
               </button>
-              {formState === "sent" && (
-                <p className="text-xs text-[#5a5a63] text-center">
-                  {t("contact.demoNote")}
-                </p>
-              )}
+
             </form>
           </div>
 

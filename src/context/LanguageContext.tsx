@@ -59,7 +59,6 @@ const translations = {
     "contact.send": "Enviar mensaje",
     "contact.sending": "Enviando...",
     "contact.sent": "¡Mensaje enviado!",
-    "contact.demoNote": "Formulario de demostración — en una implementación real, esto enviaría un email.",
     "contact.quote": "Construyo soluciones de automatización que ahorran tiempo y dinero. Especialista en n8n con experiencia en infraestructura 24/7.",
     // Footer
     "footer.copy": "Nicolás. Construido con React, Tailwind, n8n y café.",
@@ -116,7 +115,6 @@ const translations = {
     "contact.send": "Send message",
     "contact.sending": "Sending...",
     "contact.sent": "Message sent!",
-    "contact.demoNote": "Demo form — in a real implementation, this would send an email.",
     "contact.quote": "I build automation solutions that save time and money. n8n specialist with 24/7 infrastructure experience.",
     // Footer
     "footer.copy": "Nicolás. Built with React, Tailwind, n8n and coffee.",
