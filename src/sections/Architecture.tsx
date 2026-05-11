@@ -68,7 +68,7 @@ export function Architecture() {
         {/* Methodology pipeline */}
         <Reveal>
           <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
-            {["ARQUITECTURA", "DOCUMENTACIÓN", "CÓDIGO", "TESTING", "PRODUCCIÓN"].map(
+            {["ARQUITECTURA", "DOCUMENTACIÓN", "CÓDIGO", "PRODUCCIÓN"].map(
               (step, i, arr) => (
                 <div key={step} className="flex items-center gap-3">
                   <span className="font-mono text-xs text-[#EA4B71] bg-[rgba(234,75,113,0.12)] border border-[#EA4B71]/20 px-4 py-2 rounded-md whitespace-nowrap">

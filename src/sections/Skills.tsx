@@ -6,7 +6,6 @@ import {
   Workflow,
   GitBranch,
   Cpu,
-  Globe,
   Link2,
   Bot,
 } from "lucide-react";
@@ -19,8 +18,7 @@ import {
   SiTailwindcss,
   SiVite,
   SiSupabase,
-  SiMysql,
-  SiPostgresql,
+  SiMariadb,
   SiN8N,
   SiGit,
   SiGithub,
@@ -29,6 +27,7 @@ import {
   SiNotion,
   SiNextdotjs,
   SiVercel,
+  SiExpress,
   SiJson,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
@@ -46,9 +45,7 @@ const techIcons: Record<string, TechDef> = {
   "Tailwind CSS": { icon: SiTailwindcss, color: "#06B6D4" },
   Vite: { icon: SiVite, color: "#646CFF" },
   Supabase: { icon: SiSupabase, color: "#3ECF8E" },
-  MySQL: { icon: SiMysql, color: "#4479A1" },
-  PostgreSQL: { icon: SiPostgresql, color: "#336791" },
-  "APIs REST": { icon: Globe, color: "#8a8a93" },
+  MariaDB: { icon: SiMariadb, color: "#003545" },
   n8n: { icon: SiN8N, color: "#EA4B71" },
   Webhooks: { icon: Link2, color: "#8a8a93" },
   Integraciones: { icon: Link2, color: "#8a8a93" },
@@ -62,6 +59,7 @@ const techIcons: Record<string, TechDef> = {
   JSON: { icon: SiJson, color: "#ffffff" },
   "Next.js": { icon: SiNextdotjs, color: "#ffffff" },
   Vercel: { icon: SiVercel, color: "#ffffff" },
+  Express: { icon: SiExpress, color: "#404040" },
 };
 
 function TechBadge({ name }: { name: string }) {
@@ -100,7 +98,7 @@ const skillData = [
     icon: Database,
     title: "Backend & Datos",
     titleEn: "Backend & Data",
-    tags: ["Supabase", "MySQL", "PostgreSQL", "APIs REST"],
+    tags: ["Supabase", "MariaDB"],
   },
   {
     icon: Workflow,
@@ -112,7 +110,7 @@ const skillData = [
     icon: GitBranch,
     title: "DevOps & Tools",
     titleEn: "DevOps & Tools",
-    tags: ["Git", "GitHub", "Docker", "GitHub Actions"],
+    tags: ["Git", "GitHub", "Docker", "GitHub Actions", "Vercel"],
   },
   {
     icon: Cpu,
@@ -167,7 +165,7 @@ export function Skills() {
               {t("skills.exploring")}:
             </span>
             <div className="flex flex-wrap gap-2">
-              {["Next.js", "Vercel", "Testing"].map((tName) => (
+              {["Next.js", "Express"].map((tName) => (
                 <TechBadge key={tName} name={tName} />
               ))}
             </div>
