@@ -23,6 +23,7 @@ import gieDashboard from "@/assets/GIE_captures/gie_dashboard.png";
 import gieInformes from "@/assets/GIE_captures/gie_informes.png";
 import gieEstadisticas from "@/assets/GIE_captures/gie_estadisticas.png";
 import gieAlumnos from "@/assets/GIE_captures/gie_alumnos.png";
+import esquinaImg from "@/assets/project-esquina.png";
 
 interface Project {
   id: string;
@@ -31,6 +32,7 @@ interface Project {
   captures: string[];
   tags: string[];
   repoUrl: string;
+  liveUrl?: string;
 }
 
 const projects: Project[] = [
@@ -41,6 +43,15 @@ const projects: Project[] = [
     captures: [gieLogin, gieDashboard, gieInformes, gieEstadisticas, gieAlumnos],
     tags: ["React", "Vite", "Tailwind CSS", "Supabase", "PDF Generation"],
     repoUrl: "https://github.com/Hung-Nicolas/GIE",
+  },
+  {
+    id: "esquina",
+    key: "projects.esquina",
+    image: esquinaImg,
+    captures: [esquinaImg],
+    tags: ["React", "Vite", "Tailwind CSS", "GSAP"],
+    repoUrl: "https://github.com/Hung-Nicolas/esquina-booking",
+    liveUrl: "https://esquina-booking.vercel.app/",
   },
 ];
 
@@ -84,10 +95,10 @@ export function Projects() {
 
         <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
           {projects.map((project) => (
-            <StaggerItem key={project.id}>
+            <StaggerItem key={project.id} className="h-full">
               <button
                 onClick={() => setActiveProject(project)}
-                className="group w-full text-left bg-[#111113] border border-white/[0.06] rounded-[14px] overflow-hidden hover:border-white/[0.12] hover:shadow-card-hover transition-all duration-300 hover:-translate-y-0.5"
+                className="group w-full h-full flex flex-col text-left bg-[#111113] border border-white/[0.06] rounded-[14px] overflow-hidden hover:border-white/[0.12] hover:shadow-card-hover transition-all duration-300 hover:-translate-y-0.5"
               >
                 <div className="aspect-[16/10] overflow-hidden bg-[#0a0a0b]">
                   <img
@@ -96,14 +107,14 @@ export function Projects() {
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-lg font-semibold text-[#f5f5f7] mb-2">
                     {t(`${project.key}.title` as any)}
                   </h3>
                   <p className="text-sm text-[#8a8a93] leading-relaxed mb-4 line-clamp-3">
                     {t(`${project.key}.desc` as any)}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tags.map((tag) => (
                       <TechBadge key={tag} name={tag} />
                     ))}
@@ -162,11 +173,22 @@ export function Projects() {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
+                  {activeProject.liveUrl && (
+                    <a
+                      href={activeProject.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#EA4B71] text-white text-sm font-medium hover:bg-[#EA4B71]/90 transition-colors"
+                    >
+                      <FileText className="w-4 h-4" />
+                      {t("projects.viewProject")}
+                    </a>
+                  )}
                   <a
                     href={activeProject.repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#EA4B71] text-white text-sm font-medium hover:bg-[#EA4B71]/90 transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#1a1a1d] border border-white/[0.06] text-[#f5f5f7] text-sm font-medium hover:border-white/[0.12] transition-colors"
                   >
                     <Github className="w-4 h-4" />
                     {t("projects.viewRepo")}

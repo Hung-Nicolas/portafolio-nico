@@ -53,6 +53,8 @@ const translations = {
     "projects.viewRepo": "Ver código",
     "projects.gie.title": "GIE — Gestor de Informes Escolares",
     "projects.gie.desc": "Sistema web para gestionar, generar y exportar informes escolares. Permite crear alumnos, asignar materias, cargar calificaciones y generar PDFs de informes periódicos de forma automática.",
+    "projects.esquina.title": "La Esquina Booking",
+    "projects.esquina.desc": "Sitio web de presentación para un restaurante. Diseño elegante con animaciones fluidas mediante GSAP, navegación suave con Lenis y experiencia visual inmersiva.",
     // Contact
     "contact.label": "CONTACTO",
     "contact.title": "¿Tenés un proceso que toma horas?",
@@ -113,6 +115,8 @@ const translations = {
     "projects.viewRepo": "View code",
     "projects.gie.title": "GIE — School Reports Manager",
     "projects.gie.desc": "Web system to manage, generate and export school reports. Allows creating students, assigning subjects, loading grades and automatically generating periodic report PDFs.",
+    "projects.esquina.title": "La Esquina Booking",
+    "projects.esquina.desc": "Showcase website for a restaurant. Elegant design with fluid GSAP animations, smooth Lenis scrolling and immersive visual experience.",
     // Contact
     "contact.label": "CONTACT",
     "contact.title": "Got a process that takes hours?",
